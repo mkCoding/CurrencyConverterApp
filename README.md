@@ -19,8 +19,8 @@ What the app does
 
 
 Images of the App:
-![Screenshot](CurrencyConverter1.png)
-![Screenshot](CurrencyConverter2.png)
+<br>
+![Screenshot](CurrencyConverter1.png) ![Screenshot](CurrencyConverter2.png)
 
 
 Additional Info:

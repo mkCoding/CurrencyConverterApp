@@ -90,13 +90,13 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-
-
             override fun onNothingSelected(p0: AdapterView<*>?) {
                 TODO("Not yet implemented")
             }
 
         }
+
+
 
         //call this method to convert from 1 currency to another
         convertCurrency(convertButton,fromSpinner,toSpinner,editCurrencyAmount);
@@ -108,15 +108,33 @@ class MainActivity : AppCompatActivity() {
     private fun convertCurrency (button: MaterialButton, fromSpinner: Spinner, toSpinner: Spinner, editCurrencyAmount: EditText){
         button.setOnClickListener {
 
-            try {
-                val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
-            } catch (e: java.lang.Exception) {
-                // TODO: handle exception
-            }
+            //hide the keyboard on button click
+            hideKeyboard();
+
+
+            //Initialize values for from/To currency
             val fromCurrency = fromSpinner.selectedItem.toString();
             val toCurrency = toSpinner.selectedItem.toString();
 
+            //Grab the currency symbol to be displayed in the result
+            var resultCurrencySymbol = "";
+
+            //this will check the currency in the to spinner and set the associated result currency symbol
+            when(toCurrency){
+                "USD" -> { resultCurrencySymbol = "$"; }
+                "EUR" -> { resultCurrencySymbol = "€" }
+                "JPY" -> { resultCurrencySymbol = "¥" }
+                "GBP" -> { resultCurrencySymbol = "£";}
+                "CHF" -> { resultCurrencySymbol = "₣";}
+                "CAD" -> { resultCurrencySymbol = "C$"}
+                "AUD" -> { resultCurrencySymbol = "A$"}
+                "NZD" -> { resultCurrencySymbol="NZ$"}
+                "ZAR" -> { resultCurrencySymbol="R"}
+            }
+
+
+
+            //If the value in edit currency amount is not empty then make a request to the REST API
             if(!editCurrencyAmount.equals("")){
                 Thread {
                     try {
@@ -133,7 +151,7 @@ class MainActivity : AppCompatActivity() {
                                 println("$name: $value")
                             }
 
-//                        println(response.body!!.string()) //prints entire response body
+                        //println(response.body!!.string()) //prints entire response body
 
 
                             val jsonObject = JSONObject(response.body!!.string())
@@ -141,10 +159,10 @@ class MainActivity : AppCompatActivity() {
                             val result = jsonObject.get("result")
                             val roundResult = String.format(Locale.US, "%.2f", result)
 
-                            Log.d("Result:", "The conversion from USD to NGN is $roundResult");
+//                            Log.d("Result:", "The conversion from USD to NGN is $roundResult");
 
                             //display the converted result to the screen after Convert button is presses
-                            amountResult.text = "$roundResult";
+                            amountResult.text = "$resultCurrencySymbol $roundResult";
 
                         }
 
@@ -166,19 +184,21 @@ class MainActivity : AppCompatActivity() {
 
 
 
-//             hideKeyboard();
-
-
-
 
             }
 
         }
 
 
-    private fun AppCompatActivity.hideKeyboard() {
-        val imm = this.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.hideSoftInputFromWindow(this.window.attributes.token, 0)
+
+private fun hideKeyboard(){
+        //hide the keyboard on button click
+        try {
+            val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
+        } catch (e: java.lang.Exception) {
+            // TODO: handle exception
+        }
     }
 
 

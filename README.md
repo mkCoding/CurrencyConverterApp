@@ -15,7 +15,7 @@ What the app does
 <br>This application allows the user to select a From/To currency type and convert to a desired currency 
 
 
-<br> This app was specifically made to showcase my skills when it comes to developing apps in <b>Kotlin</b> and using <b>REST APIs</> 
+<br> This app was specifically made to showcase my skills when it comes to developing apps in <b>Kotlin</b> and using <b>REST APIs</b> 
 
 
 Images of the App:

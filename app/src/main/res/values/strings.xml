@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">CurrencyConverter</string>
+    <string name="toTitle">To</string>
+    <string name="fromTitle">From</string>
+    <string name="mainTitle"><u>Currency Converter</u></string>
+    <string name="convertButton">Convert</string>
+
+
+    <string-array name="currency_array">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>GBP</item>
+        <item>CHF</item>
+        <item>CAD</item>
+        <item>AUD</item>
+        <item>NZD</item>
+        <item>ZAR</item>
+    </string-array>
+
+    <string-array name="currency2_array">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>GBP</item>
+        <item>CHF</item>
+        <item>CAD</item>
+        <item>AUD</item>
+        <item>NZD</item>
+        <item>ZAR</item>
+    </string-array>
+
+</resources>

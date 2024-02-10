@@ -21,8 +21,8 @@
 
 <ins><b>Screenshots:</b></ins>
 <br><br>
-![Screenshot](CurrencyConverter1.png)![Screenshot](CurrencyConverter3.png)
 
+<img src="CurrencyConverter1.png" width="404" height="713"/> <img src="CurrencyConverter3.png" width="404" height="713"/>
 
 Additional Info:
 This app will gradually be updated overtime

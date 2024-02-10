@@ -1,11 +1,27 @@
 <b>Currency Converter App</b>
 
 What was used to develop the application:
-  Kotlin, XML
-  OkHttp, Exchange Rate Data API (https://apilayer.com/marketplace/exchangerates_data-api)
-  Android Studio
+ <ul>
+  <li>Kotlin</li>
+  <li>XML</li>
+  <li>OkHttp</li>
+  <li>Exchange Rate Data API - (https://apilayer.com/marketplace/exchangerates_data-api)
+ </li>
+  <li>Android Studio</li>
+</ul> 
+
   
-Summary:
- This application allos the user to select a From/To currency type and convert to a desired currency
- 
-This app was specifically made to showcase my skills when it comes to developing apps in Kotlin and using REST APIs 
+What the app does
+<br>This application allows the user to select a From/To currency type and convert to a desired currency 
+
+
+<br> This app was specifically made to showcase my skills when it comes to developing apps in <b>Kotlin</b> and using <b>REST APIs</> 
+
+
+Images of the App:
+![Screenshot](CurrencyConverter1.png)
+![Screenshot](CurrencyConverter2.png)
+
+
+Additional Info:
+

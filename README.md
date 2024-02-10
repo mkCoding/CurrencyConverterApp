@@ -21,7 +21,7 @@
 
 <ins><b>Screenshots:</b></ins>
 <br><br>
-![Screenshot](CurrencyConverter1.png) ![Screenshot](CurrencyConverter3.png)
+![Screenshot](CurrencyConverter1.png)![Screenshot](CurrencyConverter3.png)
 
 
 Additional Info:

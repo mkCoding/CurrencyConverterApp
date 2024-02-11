@@ -22,7 +22,7 @@
 <ins><b>Screenshots:</b></ins>
 <br><br>
 
-<img src="CurrencyConverter1.png" width="404" height="713"/> <img src="CurrencyConverter3.png" width="404" height="713"/>
+<img src="CurrencyConverter4.png" width="404" height="713"/> <img src="CurrencyConverter5.png" width="404" height="713"/>
 
 Additional Info:
 This app will gradually be updated overtime

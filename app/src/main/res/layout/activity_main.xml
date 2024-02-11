@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/border"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:text="@string/mainTitle"
         android:textSize="30sp"
+        android:textColor="@color/white"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,13 +23,13 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="23dp"
         android:layout_marginTop="112dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.322"
+        app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -36,9 +38,10 @@
             android:id="@+id/fromTitle"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="32dp"
             android:text="@string/fromTitle"
             android:textAlignment="textStart"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="italic|bold" />
 
@@ -46,9 +49,10 @@
             android:id="@+id/toTitle"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="-5dp"
             android:text="@string/toTitle"
             android:textAlignment="textStart"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="italic|bold" />
 
@@ -61,18 +65,21 @@
         android:layout_height="wrap_content"
         android:text="@string/convertButton"
         android:textSize="30sp"
+        android:textColor="@color/black"
+        android:backgroundTint="#F4F7F7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.144" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,6 +93,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="20dp"
             android:text="$"
+            android:textColor="@color/white"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -96,9 +104,12 @@
 
         <EditText
             android:id="@+id/editCurrencyAmount"
-            android:layout_width="325dp"
-            android:layout_height="50dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-20dp"
             android:hint="Enter US Dollar amount"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray"
             android:inputType="numberDecimal"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -114,23 +125,26 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="365dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.214">
 
         <Spinner
             android:id="@+id/fromSpinner"
-            android:layout_width="150dp"
+            style="@android:style/Widget.Spinner"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="1dp"
+            android:spinnerMode="dropdown"
+
             android:entries="@array/currency_array"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -141,9 +155,12 @@
 
         <Spinner
             android:id="@+id/toSpinner"
-            android:layout_width="150dp"
+            style="@android:style/Widget.Spinner"
+            android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginStart="30dp"
+            android:spinnerMode="dropdown"
+
             android:entries="@array/currency2_array"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -160,6 +177,8 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Amount"
+        android:textColor="@color/white"
+
         android:textAlignment="center"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -167,6 +186,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/convertButton"
         app:layout_constraintVertical_bias="0.177" />
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

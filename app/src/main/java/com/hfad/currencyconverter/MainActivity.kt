@@ -62,29 +62,29 @@ class MainActivity : AppCompatActivity() {
                Toast.makeText(applicationContext,"selected currency "+currencyTypes[position], Toast.LENGTH_SHORT).show();
 
                 when(currencyTypes[position]){
-                    "USD" -> {editCurrencyAmount.hint = "Dollar Amount";
+                    "USD - United States Dollars" -> {editCurrencyAmount.hint = "Dollar Amount";
                               currencySymbol.text = "$";
                     }
-                    "EUR" -> { editCurrencyAmount.hint = "Euro Amount";
+                    "EUR - Euro" -> { editCurrencyAmount.hint = "Euro Amount";
                                currencySymbol.text = "€"
                     }
-                    "JPY" -> {editCurrencyAmount.hint = "Yen Amount";
+                    "JPY - Japanese Yen" -> {editCurrencyAmount.hint = "Yen Amount";
                                currencySymbol.text = "¥"
                     }
-                    "GBP" -> {editCurrencyAmount.hint = "Pound Amount";
+                    "GBP - British Pound Sterling" -> {editCurrencyAmount.hint = "Pound Amount";
                         currencySymbol.text = "£";
                     }
-                    "CHF" -> {editCurrencyAmount.hint = "Swiss Franc Amount";
+                    "CHF - Swiss Franc" -> {editCurrencyAmount.hint = "Swiss Franc Amount";
                         currencySymbol.text = "CHF";}
-                    "CAD" -> {editCurrencyAmount.hint = "Canadian Dollar Amount";
+                    "CAD - Canadian Dollar" -> {editCurrencyAmount.hint = "Canadian Dollar Amount";
                          currencySymbol.text = "C$"}
 
-                    "AUD" -> {editCurrencyAmount.hint = "Australian Dollar Amount";
+                    "AUD - Australian Dollar" -> {editCurrencyAmount.hint = "Australian Dollar Amount";
                                currencySymbol.text = "A$"}
 
-                    "NZD" -> {editCurrencyAmount.hint = "New Zealand Dollar Amount";
+                    "NZD - New Zealand Dollar" -> {editCurrencyAmount.hint = "New Zealand Dollar Amount";
                               currencySymbol.text="NZ$"}
-                    "ZAR" -> {editCurrencyAmount.hint = "South African Rand Amount";
+                    "ZAR - South African Rand" -> {editCurrencyAmount.hint = "South African Rand Amount";
                         currencySymbol.text="R"}
 
 
@@ -124,8 +124,8 @@ class MainActivity : AppCompatActivity() {
 
 
             //Initialize values for from/To currency
-            val fromCurrency = fromSpinner.selectedItem.toString();
-            val toCurrency = toSpinner.selectedItem.toString();
+            val fromCurrency = fromSpinner.selectedItem.toString().substringBefore(" ");
+            val toCurrency = toSpinner.selectedItem.toString().substringBefore(" ");
 
             //Grab the currency symbol to be displayed in the result
             var resultCurrencySymbol = "";
@@ -213,6 +213,10 @@ private fun hideKeyboard(){
         }
     }
 
+
+    /*
+    method to check for internet connection
+     */
     private fun checkForInternet(context: Context): Boolean {
 
         // register activity with the connectivity manager service

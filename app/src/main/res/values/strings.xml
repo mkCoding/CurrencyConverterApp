@@ -1,33 +1,35 @@
 <resources>
     <string name="app_name">CurrencyConverter</string>
-    <string name="toTitle">To</string>
-    <string name="fromTitle">From</string>
+    <string name="toTitle2">To</string>
+    <string name="fromTitle2">From</string>
     <string name="mainTitle"><u>Currency Converter</u></string>
     <string name="convertButton">Convert</string>
 
 
     <string-array name="currency_array">
-        <item>USD</item>
-        <item>EUR</item>
-        <item>JPY</item>
-        <item>GBP</item>
-        <item>CHF</item>
-        <item>CAD</item>
-        <item>AUD</item>
-        <item>NZD</item>
-        <item>ZAR</item>
+        <item>USD - United States Dollars</item>
+        <item>EUR - Euro</item>
+        <item>JPY - Japanese Yen</item>
+        <item>GBP - British Pound Sterling</item>
+        <item>CHF - Swiss Franc</item>
+        <item>CAD - Canadian Dollar</item>
+        <item>AUD - Australian Dollar</item>
+        <item>NZD - New Zealand Dollar</item>
+        <item>ZAR - South African Rand</item>
     </string-array>
 
     <string-array name="currency2_array">
-        <item>USD</item>
-        <item>EUR</item>
-        <item>JPY</item>
-        <item>GBP</item>
-        <item>CHF</item>
-        <item>CAD</item>
-        <item>AUD</item>
-        <item>NZD</item>
-        <item>ZAR</item>
+        <item>USD - United States Dollars</item>
+        <item>EUR - Euro</item>
+        <item>JPY - Japanese Yen</item>
+        <item>GBP - British Pound Sterling</item>
+        <item>CHF - Swiss Franc</item>
+        <item>CAD - Canadian Dollar</item>
+        <item>AUD - Australian Dollar</item>
+        <item>NZD - New Zealand Dollar</item>
+        <item>ZAR - South African Rand</item>
     </string-array>
+
+
 
 </resources>

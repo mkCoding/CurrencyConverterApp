@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mainTitle"
-        android:textSize="30sp"
         android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,52 +21,52 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="112dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.161"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linearLayout"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="23dp"-->
+    <!--        android:layout_marginTop="112dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.161"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
 
 
-        <TextView
-            android:id="@+id/fromTitle"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="@string/fromTitle"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="italic|bold" />
+    <!--        <TextView-->
+    <!--            android:id="@+id/fromTitle"-->
+    <!--            android:layout_width="170dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="32dp"-->
+    <!--            android:text="@string/fromTitle"-->
+    <!--            android:textAlignment="textStart"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="24sp"-->
+    <!--            android:textStyle="italic|bold" />-->
 
-        <TextView
-            android:id="@+id/toTitle"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="-5dp"
-            android:text="@string/toTitle"
-            android:textAlignment="textStart"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:textStyle="italic|bold" />
+    <!--        <TextView-->
+    <!--            android:id="@+id/toTitle"-->
+    <!--            android:layout_width="170dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="-5dp"-->
+    <!--            android:text="@string/toTitle"-->
+    <!--            android:textAlignment="textStart"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="24sp"-->
+    <!--            android:textStyle="italic|bold" />-->
 
 
-    </LinearLayout>
+    <!--    </LinearLayout>-->
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/convertButton"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="@string/convertButton"
-        android:textSize="30sp"
-        android:textColor="@color/black"
         android:backgroundTint="#F4F7F7"
+        android:text="@string/convertButton"
+        android:textColor="@color/black"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
@@ -78,8 +78,8 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,8 +89,8 @@
         <TextView
             android:id="@+id/currencySymbol"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="1dp"
             android:layout_marginEnd="20dp"
             android:text="$"
             android:textColor="@color/white"
@@ -105,12 +105,12 @@
         <EditText
             android:id="@+id/editCurrencyAmount"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_marginStart="-20dp"
             android:hint="Enter US Dollar amount"
+            android:inputType="numberDecimal"
             android:textColor="@color/white"
             android:textColorHint="@color/gray"
-            android:inputType="numberDecimal"
             android:textSize="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -125,9 +125,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -136,38 +136,93 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.214">
 
-        <Spinner
-            android:id="@+id/fromSpinner"
-            style="@android:style/Widget.Spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="1dp"
-            android:spinnerMode="dropdown"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            android:entries="@array/currency_array"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.06"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.318" />
+        <LinearLayout
+            android:id="@+id/linearLayoutFrom"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="35dp"
+            android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/toSpinner"
-            style="@android:style/Widget.Spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginStart="30dp"
-            android:spinnerMode="dropdown"
+            <TextView
+                android:id="@+id/fromTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
 
-            android:entries="@array/currency2_array"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.84"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.318" />
+                android:text="@string/fromTitle2"
+
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="italic|bold" />
+
+            <Spinner
+                android:id="@+id/fromSpinner"
+                style="@android:style/Widget.Spinner"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+
+                android:layout_marginEnd="1dp"
+                android:entries="@array/currency_array"
+
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.06"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.318" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTo"
+            android:layout_marginStart="15dp"
+            android:gravity="center"
+            android:layout_width="350dp"
+
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/toTitle2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/toTitle2"
+                android:layout_marginStart="4dp"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="italic|bold" />
+
+            <Spinner
+                android:id="@+id/toSpinner"
+                style="@android:style/Widget.Spinner"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+
+                android:entries="@array/currency2_array"
+
+                android:spinnerMode="dropdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.84"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.318" />
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
 
 
     </LinearLayout>
@@ -177,18 +232,15 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Amount"
-        android:textColor="@color/white"
-
         android:textAlignment="center"
+
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/convertButton"
         app:layout_constraintVertical_bias="0.177" />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,13 @@
 <br><br>
 
 <img src="CurrencyConverter4.png" width="404" height="713"/> <img src="CurrencyConverter5.png" width="404" height="713"/>
+<br><br>
+
+
+<ins><b>Design Updated - 2/26/2024 (below)</b></ins>
+<br>
+<img src="Screenshot-Current.png" width="394" height="879"/> <img src="Screenshot-Current-2.png" width="394" height="879"/>  <img src="Screenshot-Current-3.png" width="394" height="879"/>
+
 
 Additional Info:
 This app will gradually be updated overtime
